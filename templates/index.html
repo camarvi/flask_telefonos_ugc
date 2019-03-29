@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="col-md-8 offset-md-2">
+<form class="form-horizontal" action="/centros" method="post">
+    <div class="form-group col-xs-6 ">
+        <label class="col-xs-2 col-form-label" for="ugc">SELECCIONAR UGC :</label>
+        <select class="form-control custom-select col-md-4" id="ugc" name="ugc">
+            {% for ugc in lista_ugc %}
+            <option value='{{ ugc.1}} | {{ ugc.2 }}'>{{ ugc.2 }}</option>
+            {% endfor %}
+        </select>
+            <button type="submit" id="buscar" name="buscar" value="buscar"
+                class="btn btn-primary col-xs-offset-5 col-xs-2">
+                <span class="glyphicon glyphicon-search"></span>
+                Buscar Telefonos
+            </button>
+
+        </div>
+    </div>
+</form>
+
+
+</div>
+
+    
+
+{% endblock %}
+

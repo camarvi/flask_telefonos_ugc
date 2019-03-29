@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<p>{{ nombre_ugc }}</p>
+<div class="table-responsive">
+    <table class="table table-hover table-bordered table-condensed table-striped">
+        <thead>
+            <tr>
+                <td>CODIGO</td>
+                <td>NOMBRE</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for centro in centros %}
+            <tr>
+                <td>{{ centro.0 }}</td>
+                <td>{{ centro.1 }}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="col-md-12">
+    <a class="btn btn-primary btn-lg" href="/" role="button">Inicio</a>
+</div>
+{% endblock %}
