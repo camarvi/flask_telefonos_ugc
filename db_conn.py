@@ -6,7 +6,7 @@
 import pyodbc  #""" Libreria acceso a Sql_Server"""
 
 class ConexionBD:
-    def __init__(self,server='10.8.65.17',database='CMANDOS',usuario='sa',password='servidor'):
+    def __init__(self,server='xxxxx',database='xxxxx',usuario='xxx',password='xxxxx'):
         self.server = server
         self.database = database
         self.usuario = usuario
